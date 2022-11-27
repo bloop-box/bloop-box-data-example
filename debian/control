@@ -1,0 +1,15 @@
+Source: bloop-box-data-example
+Section: games
+Priority: optional
+Maintainer: DASPRiD <mail@dasprids.de>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+
+Package: bloop-box-data-example
+Architecture: all
+Depends: ${misc:Depends}
+Provides: bloop-box-data
+Description: Data files for bloop-box
+ Custom unique data files for the bloop-box package.
+
