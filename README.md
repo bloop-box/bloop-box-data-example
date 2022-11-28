@@ -30,11 +30,11 @@ This is the directory structure you must follow in order for this project to be
 compatible (within the `share` folder):
 
 | File                | Description                                           |
-| ------------------- | ----------------------------------------------------- |
+|---------------------|-------------------------------------------------------|
 | `error.mp3`         | Played whenever an invalid NFC tag was scanned        |
 | `throttle.mp3`      | Played when the server throttles the user             |
-| `volume-change.mp3` | Played when the volume is changed.                    |
-| `achievement/*.mp3` | Randomly played when the user received an achievement |
+| `volume-change.mp3` | Played when the volume is changed                     |
+| `confirm/*.mp3`     | Randomly played when the user received an achievement |
 | `bloop/*.mp3`       | Randomly played when an NFC tag is detected           |
 
 ## Building the deb
