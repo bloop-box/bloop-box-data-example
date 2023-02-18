@@ -8,7 +8,7 @@ to get your own static audio files into the system.
 
 1. Fork this project, either to another GitHub account or your private git
    repository.
-2. Replace all occurences of `bloop-box-data-example` in the `debian` folder
+2. Replace all occurrences of `bloop-box-data-example` in the `debian` folder
    with your own package name in all files and their file names.
 4. Don't forget to update the `debian/.gitignore` file with the changed names
    as well.
@@ -36,6 +36,19 @@ compatible (within the `share` folder):
 | `volume-change.mp3` | Played when the volume is changed                     |
 | `confirm/*.mp3`     | Randomly played when the user received an achievement |
 | `bloop/*.mp3`       | Randomly played when an NFC tag is detected           |
+
+### Weighted random select
+
+As of Bloop Box 3.1.0 you are able to assign weights to each of the randomly selected audio files. By default they have
+a weight of 100 and you can modify the weight by specifying it in the filename in the following format:
+
+```
+filename.[w=100].mp3
+```
+
+A weight can be any integer or float which is equal or greater than 0. Thus, if you have three files, with one file set
+to a weight of 50 and the other left at the default weight, the first file will have a probability of 20% while the
+remaining two have a probability of 40% each.
 
 ## Building the deb
 
