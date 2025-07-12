@@ -10,9 +10,9 @@ to get your own static audio files into the system.
    repository.
 2. Replace all occurrences of `bloop-box-data-example` in the `debian` folder
    with your own package name in all files and their file names.
-4. Don't forget to update the `debian/.gitignore` file with the changed names
+3. Remember to update the `debian/.gitignore` file with the changed names
    as well.
-3. Update the `Maintainer` in the `debian/control` file.
+4. Update the `Maintainer` in the `debian/control` file.
 
 Remember to keep the `Provides: bloop-box-data` in the `debian/control` file, as
 this is what the `bloop-box` package depends on.
@@ -24,7 +24,7 @@ own audio files. You are free to keep the existing files, but you might want to
 at least have your own bloop audio files.
 
 All audio files are mono MP3s, as the bloop box only has a single speaker. This
-also keeps file size low.
+also keeps the file size low.
 
 This is the directory structure you must follow in order for this project to be
 compatible (within the `share` folder):
@@ -34,8 +34,8 @@ compatible (within the `share` folder):
 | `error.mp3`         | Played whenever an invalid NFC tag was scanned        |
 | `throttle.mp3`      | Played when the server throttles the user             |
 | `volume-change.mp3` | Played when the volume is changed                     |
-| `confirm/*.mp3`     | Randomly played when the user received an achievement |
-| `bloop/*.mp3`       | Randomly played when an NFC tag is detected           |
+| `awards/*.mp3`      | Randomly played when the user received an achievement |
+| `bloops/*.mp3`      | Randomly played when an NFC tag is detected           |
 
 ### Weighted random select
 
@@ -46,7 +46,7 @@ a weight of 100 and you can modify the weight by specifying it in the filename i
 filename.[w=100].mp3
 ```
 
-A weight can be any integer or float which is equal or greater than 0. Thus, if you have three files, with one file set
+A weight can be any integer or float, which is equal or greater than 0. Thus, if you have three files, with one file set
 to a weight of 50 and the other left at the default weight, the first file will have a probability of 20% while the
 remaining two have a probability of 40% each.
 
@@ -75,5 +75,5 @@ dch -v <version> --create
 ```
 
 This example project starts with version `1.0`. So your next version should be
-`1.1` and so on. Do not increment the major version number.
+`1.1` and so on. Do not increase the major version number.
 
